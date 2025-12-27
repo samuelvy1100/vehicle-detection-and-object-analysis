@@ -1,13 +1,11 @@
-# Computer Vision: Vehicle Detection and Lane-Aware Analysis
+# Computer Vision: Vehicle Detection and Object Analysis
 
-## Overview
-This project implements a lane-aware object detection pipeline using a pre-trained YOLOv8 model applied to real-world driving video footage from Miami, FL to New York City, NY. The system extracts video frames, performs object detection at scale, overlays lane geometry, and computes normalized spatial metrics to reason about object proximity and position relative to the driving lane.
-
-The project demonstrates how modern computer vision models can be integrated with geometric reasoning to support traffic analysis, autonomous driving research, and intelligent transportation systems.
+## Program Overview
+This project implements a lane-aware object detection pipeline using a pre-trained YOLOv8 model applied to real-world driving video footage from Miami, FL, to New York City, NY. The system extracts video frames, performs object detection at scale, overlays lane geometry, and computes normalized spatial metrics to reason about object proximity and position relative to the driving lane. The program demonstrates how modern computer vision models can be integrated with geometric reasoning to support traffic analysis, autonomous driving research, and intelligent transportation systems.
 
 ---
 
-## Project Focus
+## Focus
 The primary areas of interest are:
 
 - Apply a pre-trained deep learning object detector (YOLOv8) to real traffic video.
@@ -20,7 +18,18 @@ Rather than training a model from scratch, the emphasis is on deployment, interp
 
 ---
 
-## Methodology
+## Methodology & Implementation
+
+### Demo Video  
+The following link contains the driving footage used as input for frame extraction and object detection in this project.
+
+[(YouTube) Miami to NYC Driving Footage](https://www.youtube.com/watch?v=9qy4lExIetk)
+
+**Preview GIF:**
+
+<p align="center">
+  <img src="media/video_preview.gif" width="700" alt="YOLOv8 lane-aware object detection preview">
+</p>
 
 ### 1. Video Frame Extraction
 - Video footage is sampled at fixed time intervals (every 10 seconds).
@@ -61,12 +70,10 @@ All detections are aggregated into structured tabular data for analysis.
 - Lane geometry improves interpretability by highlighting which objects occupy the ego lane.
 - The pipeline demonstrates strong inference performance without fine-tuning, validating the robustness of modern pre-trained vision models.
 
-While no quantitative accuracy benchmarking is performed, the qualitative results align with expected real-world performance for traffic scenes.
-
 ---
 
-## Real-World Applications
-This project has direct relevance to several applied domains:
+## Applications
+The methodologies and data extraction techniques used in this project are applicable into several industrial and research-based sectors including but not limited to:
 
 - **Autonomous Driving**: Lane-aware object localization supports collision avoidance and path planning.
 - **Traffic Monitoring**: Automated vehicle counting and classification can inform congestion analysis.
@@ -89,4 +96,5 @@ This project has direct relevance to several applied domains:
 - This project focuses on inference and spatial reasoning rather than model training.
 - Lane boundaries are geometrically approximated and not learned from data.
 - The pipeline is modular and can be extended to real-time video streams.
+
 
